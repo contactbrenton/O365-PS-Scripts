@@ -24,10 +24,10 @@ function Restore-RecycleBin
     }
 
     #Connect to Sharepoint Site
-    Connect-PnPOnline -Url $siteUrl
+    Connect-PnPOnline -Url $siteUrl -interactive
     <#
     -UseWebLogin used for 2 factor Auth.  You can remove if you don't have MFA turned on
-    Connect-PnPOnline -UseWebLogin -Url  $siteUrl
+    Connect-PnPOnline -interactive -Url  $siteUrl
     #>
 
     $today = (Get-Date)
